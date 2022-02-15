@@ -1,0 +1,15 @@
+- name: Sample playbook calling a collection
+  hosts: all
+  collections:
+    - bdf.smoketest
+  tasks:
+    - name: Say Hello
+      debug:
+        msg: "Hello"
+    - name: Import role from collection
+      import_role:
+        name: test-role
+    - name: Run role imported as submodule 
+      import_role:
+        name: ansible_demo_role
+

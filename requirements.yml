@@ -1,0 +1,10 @@
+collections:
+  - name: bdf.smoketest
+    version: master
+    type: git 
+    source: git@github.com:riadhhamdi/ansible_demo_collection.git
+roles:
+  - name: samplerole
+    version: master
+    type: git 
+    source: git@github.com:riadhhamdi/ansible_demo_role.git

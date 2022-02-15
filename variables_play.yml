@@ -1,0 +1,18 @@
+- name: Sample playbook calling a collection
+  hosts: all
+  collections:
+    - bdf.smoketest
+  tasks:
+    - name: Say Hello
+      debug:
+        msg: "Hello"
+    - name: Import role from collection
+      import_role:
+        name: test-role
+    - name: Show variables 
+      debug:
+        var: item
+      loop:
+        - "{{awx_user_name}}"
+        - "{{tower_user_name}}"
+        - "{{tower_user_id}}"

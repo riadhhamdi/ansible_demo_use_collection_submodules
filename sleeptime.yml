@@ -1,0 +1,15 @@
+- name: Sample playbook calling a collection
+  vars: 
+    sleep_time: 3600
+  hosts: all
+  collections:
+    - bdf.smoketest
+  tasks:
+    - name: Say Hello
+      debug:
+        msg: "Hello"
+    - name: Import role from collection
+      import_role:
+        name: test-role
+    - name: Sleep for a while 
+      shell: "sleep {{sleep_time}}"
