@@ -1,5 +1,5 @@
 collections:
   - name: bdf.submodulessmoketest
-    version: master
+    version: devel
     type: git 
     source: git@github.com:riadhhamdi/ansible_demo_submodules.git
