@@ -1,5 +1,4 @@
 collections:
-  - name: bdf.submodulessmoketest
-    version: v1.0.1
-    type: git 
-    source: git@github.com:riadhhamdi/ansible_demo_submodules.git
+  - name: ansible.posix
+  - name: amazon.aws
+  - name: zabbix.zabbix
